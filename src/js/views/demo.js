@@ -7,7 +7,13 @@ import "../../styles/demo.css";
 
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
-
+	useEffect(()=>{
+		console.log(store.name);
+		actions.sumTwoNumbers(7,4)
+		actions.changeName("Lucia")
+		console.log(store.name);
+	},[])
+	
 	return (
 		<div className="container">
 			<ul className="list-group">
